@@ -1,0 +1,15 @@
+{
+  "id": "settings-shortcuts",
+  "displayName": "Settings Shortcuts",
+  "description": "Open any bb Settings page in one click from the sidebar footer. Pick built-in sections, plugin pages or project settings and put them in your order. It opens Settings pages through bb's URLs, so a bb update can break it until the plugin is updated.",
+  "icon": "Zap",
+  "tags": ["settings", "shortcuts", "sidebar", "footer", "navigation"],
+  "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
+  "category": "utilities",
+  "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-settings-shortcuts.git", "range": "^0.1.0" } },
+  "screenshots": [
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-settings-shortcuts/v0.1.0/docs/footer.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-settings-shortcuts/v0.1.0/docs/settings.png"
+  ],
+  "overview": "./overview/settings-shortcuts.md"
+}

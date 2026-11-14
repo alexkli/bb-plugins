@@ -1,0 +1,12 @@
+{
+  "id": "thread-badges",
+  "displayName": "Thread Badges",
+  "description": "See each thread's git branch and pull request status under its title in the sidebar. The pull request icon is colored by state, with a glyph for failing checks, running checks or ready to merge. Needs bb's thread row metadata experiment turned on.",
+  "icon": "GitBranch",
+  "tags": ["git", "branch", "pull-request", "github", "sidebar"],
+  "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
+  "category": "thread-management",
+  "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-thread-badges.git", "range": "^0.1.0" } },
+  "screenshots": ["https://raw.githubusercontent.com/alexkli/bb-plugin-thread-badges/v0.1.0/docs/marketplace-screenshot.png"],
+  "overview": "./overview/thread-badges.md"
+}

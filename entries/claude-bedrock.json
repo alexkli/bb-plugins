@@ -1,0 +1,15 @@
+{
+  "id": "claude-bedrock",
+  "displayName": "Claude Code (Bedrock)",
+  "description": "Run Claude Code threads on your AWS Bedrock account, with every feature bb's own Claude Code provider has. Threads use your Bedrock API key or AWS credentials instead of an Anthropic login, and the model picker lists the Bedrock models. Estimated spend shows in the provider usage panel against a monthly budget. Requires Claude Code and Amazon Bedrock access; the spend estimate needs Node.js.",
+  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.0/assets/icon.png" },
+  "tags": ["claude-code", "aws", "bedrock", "anthropic", "provider", "usage"],
+  "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
+  "category": "agents-and-providers",
+  "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-claude-bedrock.git", "range": "^0.1.0" } },
+  "screenshots": [
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.0/docs/models.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.0/docs/settings.png"
+  ],
+  "overview": "./overview/claude-bedrock.md"
+}
