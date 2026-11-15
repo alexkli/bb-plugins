@@ -33,7 +33,7 @@ const doc = {
   schemaVersion: 2,
   name: "alexkli",
   displayName: "alexkli's bb plugins",
-  description: "Claude Code on Amazon Bedrock and GitHub Copilot, and small bb helpers, by Alexander Klimetschek.",
+  description: "Claude Code on Amazon Bedrock and GitHub Copilot, small bb helpers and a cozy pixel-art office, by Alexander Klimetschek.",
   categories: used.map((id) => ({ id, displayName: CATEGORIES[id][0], description: CATEGORIES[id][1] })),
   plugins,
 };
