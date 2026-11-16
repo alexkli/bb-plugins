@@ -19,7 +19,7 @@ bb team; bb shows the author and source before it installs one.
 | [Claude Code ACP (Copilot)](https://github.com/alexkli/bb-plugin-acp-claude-copilot) | Claude Code on your GitHub Copilot subscription over ACP, with plan approval, Copilot's other models, a usage page and per-thread credits |
 | [Thread Badges](https://github.com/alexkli/bb-plugin-thread-badges) | Each thread's git branch and pull request status under its title in the sidebar |
 | [Settings Shortcuts](https://github.com/alexkli/bb-plugin-settings-shortcuts) | Sidebar-footer icons that open a chosen Settings page in one click |
-| [Cozy HQ](https://github.com/alexkli/bb-plugin-cozy-hq) | A cozy pixel-art office where every thread is a little worker, as a full-panel home screen in seven sceneries, with usage, an office TV, your real weather, office life and festivals through the year |
+| [Cozy HQ](https://github.com/alexkli/bb-plugin-cozy-hq) | A cozy pixel-art office where every thread is a little worker, as a full-panel home screen in seven places with their own floor plans, with usage, an office TV, your real weather, office life and festivals through the year |
 
 ## Layout
 
