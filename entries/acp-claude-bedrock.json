@@ -2,14 +2,14 @@
   "id": "acp-claude-bedrock",
   "displayName": "Claude Code ACP (Bedrock)",
   "description": "Run Claude Code over ACP on your AWS Bedrock account, set up from the plugin settings with your Bedrock API key. In plan mode the plan opens in the side panel and Claude waits for your go-ahead, even in Full Access. Estimated spend shows in the provider usage panel against a monthly budget. Requires Node.js, Claude Code and Amazon Bedrock access.",
-  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.0/assets/logo.svg" },
+  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.1/assets/logo.svg" },
   "tags": ["claude-code", "aws", "bedrock", "acp", "plan-mode", "provider"],
   "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
   "category": "agents-and-providers",
   "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-acp-claude-bedrock.git", "range": "^0.1.0" } },
   "screenshots": [
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.0/docs/overview.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.0/docs/settings.png"
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.1/docs/overview.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.1/docs/settings.png"
   ],
   "overview": "./overview/acp-claude-bedrock.md"
 }
