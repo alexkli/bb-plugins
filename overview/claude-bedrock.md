@@ -4,6 +4,7 @@
 - Everything bb's Claude Code provider does: plan mode, approvals and permission modes, subagents and workflows, skills, rewind and fork, compaction and the context meter.
 - The Bedrock models Claude Code reports in the model picker, including inference profiles such as us.anthropic.claude-opus-5-5.
 - Estimated spend in the Provider usage panel and footer: this month and today, against a monthly budget you set, with a price factor for negotiated Bedrock pricing.
+- Each thread's **session cost** in the context-window popup under the prompt.
 - Setup in the plugin settings: Bedrock API key (stored as a bb secret), AWS region, AWS profile and an optional Claude Code executable.
 
 ## How it works

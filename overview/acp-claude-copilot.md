@@ -4,7 +4,7 @@
 - Every Copilot chat model in the model picker: Claude, plus GPT, Gemini, Grok and others through copilot-api's Messages translation.
 - A settings page for GitHub sign-in with a device code, copilot-api start and stop, the default model, and the Copilot models behind Claude Code's opus, sonnet and haiku aliases.
 - A **Copilot usage** page with copilot-api's token and cost dashboard. It also works from bb on a phone.
-- The Copilot credits each thread has used, above the prompt, with a breakdown by model.
+- The Copilot credits each thread has used, under the prompt next to the context-window control, with a breakdown by model. bb has no plugin slot there yet: if a bb update changes that row, the credits move to the composer's action row.
 - Your Copilot premium-request quota in the Provider usage panel.
 - Plan mode that waits for you: when Claude finishes a plan, it opens in the side panel of the thread you're looking at, and you get Claude's "Ready to code?" question, even in Full Access, where bb would otherwise approve it on its own.
 - bb's permission modes: in Accept Edits, Bash runs in Claude Code's sandbox (writes stay in the workspace), as with bb's Claude Code provider; Full Access has none. `/compact` works too.
