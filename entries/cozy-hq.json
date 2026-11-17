@@ -1,9 +1,9 @@
 {
   "id": "cozy-hq",
   "displayName": "Cozy HQ",
-  "description": "A cozy pixel-art office where every thread is a little worker: busy threads at their desks, planners at the whiteboard, threads that need you in the waiting room, idle ones chatting over coffee and having lunch together. Seven places to put it, each with its own floor plan and pets (classic, cyberpunk streets, tents among the redwoods, surf villa, New York penthouse, dusty annex, school), your real weather outside, your providers' usage, an office TV, office events, festivals through the year and chiptune-style sound.",
+  "description": "A cozy pixel-art office where every thread is a little worker: busy threads at their desks, planners at the whiteboard, threads that need you in the waiting room, idle ones chatting over coffee and having lunch together. Twelve places to put it, each with its own floor plan, pets and hidden easter eggs (classic, neon streets, redwood camp, surf villa, New York penthouse, dusty annex, school, startup house, mountain cabin, villain's lair, spaceship, coffee shop), your real weather outside, your providers' usage, an office TV, office events, festivals through the year and chiptune-style sound.",
   "icon": {
-    "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.4.0/assets/icon.svg"
+    "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.5.0/assets/icon.svg"
   },
   "tags": [
     "pixel-art",
@@ -22,15 +22,15 @@
   "source": {
     "git": {
       "url": "https://github.com/alexkli/bb-plugin-cozy-hq.git",
-      "range": "^0.4.0"
+      "range": "^0.5.0"
     }
   },
   "screenshots": [
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.4.0/docs/office.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.4.0/docs/sceneries.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.4.0/docs/evening.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.4.0/docs/server-room.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.4.0/docs/technician.png"
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.5.0/docs/office.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.5.0/docs/sceneries.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.5.0/docs/evening.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.5.0/docs/server-room.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.5.0/docs/technician.png"
   ],
   "overview": "./overview/cozy-hq.md"
 }
