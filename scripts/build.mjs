@@ -23,6 +23,7 @@ const plugins = readdirSync(join(root, "entries"))
       if (text.length > 4000) throw new Error(`${entry.overview}: ${text.length} characters, at most 4000`);
       entry.overview = text;
     }
+    if (entry.screenshots?.length > 6) throw new Error(`${f}: ${entry.screenshots.length} screenshots, at most 6`);
     if (entry.category && !CATEGORIES[entry.category]) throw new Error(`${f}: unknown category ${entry.category}`);
     return entry;
   });

@@ -31,11 +31,7 @@
     "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/neon-night.png",
     "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/lair.png",
     "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/beach.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/sceneries.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/home-office.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/tour.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/server-room.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/technician.png"
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-cozy-hq/v0.6.1/docs/sceneries.png"
   ],
   "overview": "./overview/cozy-hq.md"
 }
