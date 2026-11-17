@@ -9,7 +9,7 @@
   "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-acp-claude-copilot.git", "range": "^0.2.0" } },
   "screenshots": [
     "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/docs/overview.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/docs/settings.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/f8bc0ec/docs/settings.png",
     "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/docs/usage.png"
   ],
   "overview": "./overview/acp-claude-copilot.md"
