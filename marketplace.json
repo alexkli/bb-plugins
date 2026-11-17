@@ -25,9 +25,9 @@
     {
       "id": "acp-claude-bedrock",
       "displayName": "Claude Code ACP (Bedrock)",
-      "description": "Run Claude Code over ACP on your AWS Bedrock account, set up from the plugin settings with your Bedrock API key. In Accept Edits, Bash runs in Claude Code's sandbox, as with bb's own Claude Code provider, and /compact works. In plan mode the plan opens in the side panel and Claude waits for your go-ahead, even in Full Access. Estimated spend shows in the provider usage panel against a monthly budget. Requires Node.js and Amazon Bedrock access.",
+      "description": "Run Claude Code over ACP on your AWS Bedrock account, set up from the plugin settings with your Bedrock API key. Forks and side chats work. In Accept Edits, Bash runs in Claude Code's sandbox, as with bb's own Claude Code provider, and /compact works. In plan mode the plan opens in the side panel and Claude waits for your go-ahead, even in Full Access. Estimated spend shows in the provider usage panel against a monthly budget. Requires Node.js and Amazon Bedrock access.",
       "icon": {
-        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.3/assets/logo.svg"
+        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.2.0/assets/logo.svg"
       },
       "tags": [
         "claude-code",
@@ -46,21 +46,21 @@
       "source": {
         "git": {
           "url": "https://github.com/alexkli/bb-plugin-acp-claude-bedrock.git",
-          "range": "^0.1.0"
+          "range": "^0.2.0"
         }
       },
       "screenshots": [
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.3/docs/overview.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.1.3/docs/settings.png"
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.2.0/docs/overview.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-bedrock/v0.2.0/docs/settings.png"
       ],
-      "overview": "## What you get\n\n- **Claude Code (Bedrock ACP)** as an agent in the model picker. Threads run Claude Code through the ACP adapter and bill your AWS account instead of a Claude subscription.\n- Setup in the plugin settings: Bedrock API key, AWS region or profile. The key is stored as a bb secret and never written to the agent config.\n- bb's permission modes: in **Accept Edits**, Bash runs in Claude Code's sandbox, as with bb's own Claude Code provider, so writes stay in the workspace and Claude asks before running a command outside it. Full Access has no sandbox. A setting turns the sandbox off.\n- `/compact` in the composer, using Claude Code's own compaction.\n- Plan mode that waits for you: when Claude finishes a plan, it opens in the side panel of the thread you're looking at and follows later revisions, and you get Claude's \"Ready to code?\" question, even in Full Access, where bb would otherwise approve it on its own.\n- **Estimated spend** in the Provider usage panel and footer: this month and today, against a monthly budget you set.\n- A **price factor** for negotiated Bedrock pricing, for the cost bb shows in each thread and for the usage entry.\n- `bb acp-claude-bedrock status`, `repair` and `unregister` to check the setup, rewrite the agent entry, or remove it before uninstalling. Setup problems show in bb's plugin list.\n- A provider icon: the Claude mark with an AWS badge.\n\n## How it works\n\nThe plugin ships a launcher script that runs Claude Code in Bedrock mode over ACP with the claude-agent-acp adapter, which comes with the plugin at a pinned version. A small proxy between bb and the adapter adds the sandbox in Accept Edits, holds the plan approval for you, and records each thread's cost in a local ledger. The plugin registers the launcher as a custom agent in bb's ACP agents plugin, with bb's permission modes and compaction, and keeps that entry current across updates. The plugin uses only the public plugin SDK.\n\nThe spend figures are Claude Code's own list-price estimates, not your AWS bill.\n\n## Requirements\n\n- bb 0.49 or later, with the built-in ACP agents plugin\n- Node.js. Claude Code on PATH is used when present; otherwise the adapter's bundled Claude Code runs\n- Access to the Anthropic models on Amazon Bedrock, with a Bedrock API key or AWS credentials\n\nDetails: https://github.com/alexkli/bb-plugin-acp-claude-bedrock#setup"
+      "overview": "## What you get\n\n- **Claude Code (Bedrock ACP)** as a provider in the model picker. Threads run Claude Code through the ACP adapter and bill your AWS account instead of a Claude subscription. Forks and side chats work.\n- Setup in the plugin settings: Bedrock API key, AWS region or profile. bb stores the key as a secret and the agent reads it from there; the plugin keeps no copy, and removing the plugin removes the key.\n- **Estimated spend** in the Provider usage panel and footer: this month and today, against a monthly budget you set.\n- A **price factor** for negotiated Bedrock pricing, for the cost bb shows in each thread and for the usage entry.\n- Plan mode that waits for you: when Claude finishes a plan, it opens in the side panel of the thread you're looking at and follows later revisions, and you get Claude's \"Ready to code?\" question, even in Full Access, where bb would otherwise approve it on its own.\n- A provider icon: the Claude mark with an AWS badge.\n\n## How it works\n\nThe plugin registers its own provider, which bb runs through the plugin SDK's ACP bridge. The provider starts a launcher script that runs Claude Code in Bedrock mode over ACP with the bundled claude-agent-acp adapter, and a small proxy that records each thread's cost in a local ledger. Versions before 0.2 added a custom agent to bb's ACP agents plugin instead; the first load hands that over, and existing threads keep working.\n\nThe spend figures are Claude Code's own list-price estimates, not your AWS bill.\n\n## Requirements\n\n- bb 0.49 or later, on macOS or Linux (tested on macOS); the provider runs on the machine bb runs on\n- Node.js and Claude Code (`claude` on PATH)\n- Access to the Anthropic models on Amazon Bedrock, with a Bedrock API key or AWS credentials\n\nDetails: https://github.com/alexkli/bb-plugin-acp-claude-bedrock#setup"
     },
     {
       "id": "acp-claude-copilot",
       "displayName": "Claude Code ACP (Copilot)",
-      "description": "Run Claude Code over ACP on your GitHub Copilot subscription, set up from the plugin settings with a GitHub sign-in. Copilot's GPT, Gemini and Grok models sit next to Claude in the model picker. In Accept Edits, Bash runs in Claude Code's sandbox, as with bb's own Claude Code provider, and /compact works. In plan mode Claude waits for your go-ahead, even in Full Access. Each thread's Copilot credits show above the prompt, a usage page has the token dashboard, and your premium-request quota shows in the provider usage panel. Requires Node.js, Claude Code and a GitHub Copilot subscription.",
+      "description": "Run Claude Code over ACP on your GitHub Copilot subscription, set up from the plugin settings with a GitHub sign-in. Copilot's GPT, Gemini and Grok models sit next to Claude in the model picker. Forks and side chats work. In Accept Edits, Bash runs in Claude Code's sandbox, as with bb's own Claude Code provider, and /compact works. In plan mode Claude waits for your go-ahead, even in Full Access. Each thread's Copilot credits show above the prompt, a usage page has the token dashboard, and your premium-request quota shows in the provider usage panel. Requires Node.js, Claude Code and a GitHub Copilot subscription.",
       "icon": {
-        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.1.4/assets/logo.svg"
+        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/assets/logo.svg"
       },
       "tags": [
         "claude-code",
@@ -80,22 +80,22 @@
       "source": {
         "git": {
           "url": "https://github.com/alexkli/bb-plugin-acp-claude-copilot.git",
-          "range": "^0.1.0"
+          "range": "^0.2.0"
         }
       },
       "screenshots": [
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.1.4/docs/overview.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.1.4/docs/settings.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.1.4/docs/usage.png"
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/docs/overview.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/docs/settings.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.0/docs/usage.png"
       ],
-      "overview": "## What you get\n\n- **Claude Code (Copilot ACP)** as an agent in the model picker. Threads run Claude Code through the ACP adapter on your GitHub Copilot subscription instead of an Anthropic login.\n- Every Copilot chat model in the model picker: Claude, plus GPT, Gemini, Grok and others through copilot-api's Messages translation.\n- A settings page for GitHub sign-in with a device code, copilot-api start and stop, the default model, and the Copilot models behind Claude Code's opus, sonnet and haiku aliases.\n- A **Copilot usage** page with copilot-api's token and cost dashboard. It also works from bb on a phone.\n- The Copilot credits each thread has used, above the prompt, with a breakdown by model.\n- Your Copilot premium-request quota in the Provider usage panel.\n- Plan mode that waits for you: when Claude finishes a plan, it opens in the side panel of the thread you're looking at, and you get Claude's \"Ready to code?\" question, even in Full Access, where bb would otherwise approve it on its own.\n- bb's permission modes: in Accept Edits, Bash runs in Claude Code's sandbox (writes stay in the workspace), as with bb's Claude Code provider; Full Access has none. `/compact` works too.\n- `bb acp-claude-copilot` commands: status (checks the whole setup), repair, unregister, login, logout, start and stop. If the plugin can't register its agent, bb shows it as needing configuration, with the reason.\n\n## How it works\n\nThe plugin ships a launcher script that runs Claude Code over ACP with the claude-agent-acp adapter (bundled, at a pinned version), and a small proxy in front of it. The proxy starts the plugin's own copilot-api (https://github.com/caozhiyuan/copilot-api) on a random local port with a generated key when a thread needs it, and points Claude Code at it. copilot-api stops after 30 idle minutes by default and starts again with the next message. The plugin registers the launcher as a custom agent in bb's ACP agents plugin and keeps that entry current across updates. It uses only the public plugin SDK.\n\nIt is independent of the Claude Copilot provider plugin, with its own sign-in and copilot-api; the two can be installed side by side.\n\n## Requirements\n\n- A GitHub Copilot subscription. Model availability and premium-request use follow your Copilot plan.\n- bb 0.49 or later, with the built-in ACP agents plugin\n- Node.js and Claude Code\n\nDetails: https://github.com/alexkli/bb-plugin-acp-claude-copilot#setup"
+      "overview": "## What you get\n\n- **Claude Code (Copilot ACP)** as a provider in the model picker. Threads run Claude Code through the ACP adapter on your GitHub Copilot subscription instead of an Anthropic login. Forks and side chats work.\n- Every Copilot chat model in the model picker: Claude, plus GPT, Gemini, Grok and others through copilot-api's Messages translation.\n- A settings page for GitHub sign-in with a device code, copilot-api start and stop, the default model, and the Copilot models behind Claude Code's opus, sonnet and haiku aliases.\n- A **Copilot usage** page with copilot-api's token and cost dashboard. It also works from bb on a phone.\n- The Copilot credits each thread has used, above the prompt, with a breakdown by model.\n- Your Copilot premium-request quota in the Provider usage panel.\n- Plan mode that waits for you: when Claude finishes a plan, it opens in the side panel of the thread you're looking at, and you get Claude's \"Ready to code?\" question, even in Full Access, where bb would otherwise approve it on its own.\n- bb's permission modes: in Accept Edits, Bash runs in Claude Code's sandbox (writes stay in the workspace), as with bb's Claude Code provider; Full Access has none. `/compact` works too.\n- `bb acp-claude-copilot` commands: status (checks the whole setup), repair, login, logout, start and stop. If the plugin can't register its provider, bb shows it as needing configuration, with the reason.\n\n## How it works\n\nThe plugin ships a launcher script that runs Claude Code over ACP with the claude-agent-acp adapter (bundled, at a pinned version), and a small proxy in front of it. The proxy starts the plugin's own copilot-api (https://github.com/caozhiyuan/copilot-api) on a random local port with a generated key when a thread needs it, and points Claude Code at it. copilot-api stops after 30 idle minutes by default and starts again with the next message. The plugin registers its own provider, which bb runs through the plugin SDK's ACP bridge. Versions before 0.2 added a custom agent to bb's ACP agents plugin instead; the first load hands that over, and existing threads keep working.\n\nIt is independent of the Claude Copilot provider plugin, with its own sign-in and copilot-api; the two can be installed side by side.\n\n## Requirements\n\n- A GitHub Copilot subscription. Model availability and premium-request use follow your Copilot plan.\n- bb 0.49 or later, on macOS or Linux (tested on macOS); the provider runs on the machine bb runs on\n- Node.js and Claude Code (`claude` on PATH)\n\nDetails: https://github.com/alexkli/bb-plugin-acp-claude-copilot#setup"
     },
     {
       "id": "claude-bedrock",
       "displayName": "Claude Code (Bedrock)",
       "description": "Run Claude Code threads on your AWS Bedrock account, with every feature bb's own Claude Code provider has. Threads use your Bedrock API key or AWS credentials instead of an Anthropic login, and the model picker lists the Bedrock models. Estimated spend shows in the provider usage panel against a monthly budget. Requires Claude Code and Amazon Bedrock access; the spend estimate needs Node.js.",
       "icon": {
-        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.0/assets/icon.png"
+        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.1/assets/icon.png"
       },
       "tags": [
         "claude-code",
@@ -118,8 +118,8 @@
         }
       },
       "screenshots": [
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.0/docs/models.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.0/docs/settings.png"
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.1/docs/models.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-bedrock/v0.1.1/docs/settings.png"
       ],
       "overview": "## What you get\n\n- **Claude Code (Bedrock)**, a second Claude Code provider next to bb's own. Threads bill your AWS account through Amazon Bedrock instead of an Anthropic login.\n- Everything bb's Claude Code provider does: plan mode, approvals and permission modes, subagents and workflows, skills, rewind and fork, compaction and the context meter.\n- The Bedrock models Claude Code reports in the model picker, including inference profiles such as us.anthropic.claude-opus-5-5.\n- Estimated spend in the Provider usage panel and footer: this month and today, against a monthly budget you set, with a price factor for negotiated Bedrock pricing.\n- Setup in the plugin settings: Bedrock API key (stored as a bb secret), AWS region, AWS profile and an optional Claude Code executable.\n\n## How it works\n\nThe plugin is bb's own Claude Code provider, copied unchanged at a bb release, under its own provider id. Bedrock is plain Claude Code configuration: the plugin gives this provider CLAUDE_CODE_USE_BEDROCK, the region and the credentials as environment, and a plain claude binary even when a machine-wide override points bb's Claude Code provider elsewhere.\n\nThe spend figures are Claude Code's own list-price estimates, recorded by a small wrapper around claude, not your AWS bill.\n\nA weekly job in the plugin's repository picks up new bb releases of the provider, so fixes reach this plugin through updates.\n\n## Requirements\n\n- bb 0.49 or later\n- Claude Code installed on the machine; Node.js for the spend estimate\n- Access to the Anthropic models on Amazon Bedrock, with a Bedrock API key or AWS credentials. On macOS the plugin can also read the key from the keychain.\n\nDetails: https://github.com/alexkli/bb-plugin-claude-bedrock#setup"
     },
@@ -128,7 +128,7 @@
       "displayName": "Claude Code (Copilot)",
       "description": "Run Claude Code threads on your GitHub Copilot subscription, with every feature bb's own Claude Code provider has. Copilot's GPT, Gemini and Grok models sit next to Claude in the model picker, and you sign in to GitHub from the plugin settings. A usage page shows the token dashboard, each thread's Copilot credits appear under the prompt, and your premium-request quota shows in the provider usage panel. Requires Claude Code and a GitHub Copilot subscription.",
       "icon": {
-        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/icons/claude-copilot.png"
+        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/icons/claude-copilot.png"
       },
       "tags": [
         "claude-code",
@@ -152,9 +152,9 @@
         }
       },
       "screenshots": [
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/docs/models.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/docs/settings.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/docs/usage.png"
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/docs/models.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/docs/settings.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/docs/usage.png"
       ],
       "overview": "## What you get\n\n- **Claude Code (Copilot)**, a second Claude Code provider next to bb's own. It keeps bb's Claude Code features, such as plan mode, and runs on your GitHub Copilot subscription instead of an Anthropic login.\n- Every Copilot chat model in the model picker: Claude, plus GPT, Gemini, Grok and others through copilot-api's Messages translation.\n- A settings page for GitHub sign-in with a device code, copilot-api start and stop, the default model and reasoning level, and the Copilot models behind Claude Code's opus, sonnet and haiku aliases.\n- A **Copilot usage** page with copilot-api's token and cost dashboard. It also works from bb on a phone.\n- The Copilot credits each thread has used, under the prompt.\n- Your premium-request quota in the Provider usage panel.\n- `bb claude-copilot` commands: status, login, logout, start and stop.\n\n## How it works\n\nThe plugin runs its own copy of copilot-api (https://github.com/caozhiyuan/copilot-api) on a random local port with a generated key, and points only this provider's Claude Code at it. copilot-api stops after 30 idle minutes by default and starts again on the next turn.\n\n## Requirements\n\n- A GitHub Copilot subscription. Model availability and premium-request use follow your Copilot plan.\n- Claude Code, with `claude` on PATH\n- bb 0.49 or later\n\n## Based on bb's Claude Code provider\n\nThe plugin contains a copy of bb's own Claude Code provider (MIT), so Copilot threads get the same features as normal Claude Code threads. It uses only public plugin API. A weekly job picks up changes to that provider from new bb releases."
     },

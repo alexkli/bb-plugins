@@ -2,15 +2,15 @@
   "id": "claude-copilot",
   "displayName": "Claude Code (Copilot)",
   "description": "Run Claude Code threads on your GitHub Copilot subscription, with every feature bb's own Claude Code provider has. Copilot's GPT, Gemini and Grok models sit next to Claude in the model picker, and you sign in to GitHub from the plugin settings. A usage page shows the token dashboard, each thread's Copilot credits appear under the prompt, and your premium-request quota shows in the provider usage panel. Requires Claude Code and a GitHub Copilot subscription.",
-  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/icons/claude-copilot.png" },
+  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/icons/claude-copilot.png" },
   "tags": ["claude-code", "github-copilot", "copilot", "gpt", "gemini", "provider", "usage"],
   "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
   "category": "agents-and-providers",
   "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-claude-copilot.git", "range": "^0.1.0" } },
   "screenshots": [
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/docs/models.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/docs/settings.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.0/docs/usage.png"
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/docs/models.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/docs/settings.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.1/docs/usage.png"
   ],
   "overview": "./overview/claude-copilot.md"
 }
