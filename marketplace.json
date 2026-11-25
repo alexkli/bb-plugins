@@ -126,9 +126,9 @@
     {
       "id": "claude-copilot",
       "displayName": "Claude Code (Copilot)",
-      "description": "Run Claude Code threads on your GitHub Copilot subscription, with every feature bb's own Claude Code provider has. Copilot's GPT, Gemini and Grok models sit next to Claude in the model picker, and you sign in to GitHub from the plugin settings. A usage page shows the token dashboard, each thread's Copilot credits appear under the prompt, and your premium-request quota shows in the provider usage panel. Requires Claude Code and a GitHub Copilot subscription.",
+      "description": "Run threads with the Claude Code harness on your GitHub Copilot subscription, including any model Copilot offers.",
       "icon": {
-        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.3/icons/claude-copilot.png"
+        "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/icons/claude-copilot.png"
       },
       "tags": [
         "claude-code",
@@ -148,15 +148,15 @@
       "source": {
         "git": {
           "url": "https://github.com/alexkli/bb-plugin-claude-copilot.git",
-          "range": "^0.1.0"
+          "range": "^1.0.0"
         }
       },
       "screenshots": [
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.3/docs/models.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.3/docs/settings.png",
-        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v0.1.3/docs/usage.png"
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/docs/models.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/docs/settings.png",
+        "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/docs/usage.png"
       ],
-      "overview": "## What you get\n\n- **Claude Code (Copilot)**, a second Claude Code provider next to bb's own. It keeps bb's Claude Code features, such as plan mode, and runs on your GitHub Copilot subscription instead of an Anthropic login.\n- Every Copilot chat model in the model picker: Claude, plus GPT, Gemini, Grok and others through copilot-api's Messages translation.\n- A settings page for GitHub sign-in with a device code, copilot-api start and stop, the default model and reasoning level, and the Copilot models behind Claude Code's opus, sonnet and haiku aliases.\n- A **Copilot usage** page with copilot-api's token and cost dashboard. It also works from bb on a phone.\n- The Copilot credits each thread has used, under the prompt next to the context-window control, with a breakdown by model. bb has no plugin slot there yet: if a bb update changes that row, the credits move to the composer's action row.\n- Your premium-request quota in the Provider usage panel.\n- `bb claude-copilot` commands: status, login, logout, start and stop.\n\n## How it works\n\nThe plugin runs its own copy of copilot-api (https://github.com/caozhiyuan/copilot-api) on a random local port with a generated key, and points only this provider's Claude Code at it. copilot-api stops after 30 idle minutes by default and starts again on the next turn.\n\n## Requirements\n\n- A GitHub Copilot subscription. Model availability and premium-request use follow your Copilot plan.\n- Claude Code, with `claude` on PATH\n- bb 0.49 or later\n\n## Based on bb's Claude Code provider\n\nThe plugin contains a copy of bb's own Claude Code provider (MIT), so Copilot threads get the same features as normal Claude Code threads. It uses only public plugin API. A weekly job picks up changes to that provider from new bb releases."
+      "overview": "## What you get\n\n- **Claude Code (Copilot)**, a second Claude Code provider next to bb's own. It keeps bb's Claude Code features, such as plan mode, and runs on your GitHub Copilot subscription instead of an Anthropic login.\n- Every Copilot chat model in the model picker: Claude, plus GPT, Gemini, Grok and others through copilot-api's Messages translation.\n- A settings page for GitHub sign-in with a device code, copilot-api start and stop (plus an expandable advanced `config.json` editor), bb's standard Claude Code options, an optional **Prompt on sandbox escape** toggle, and the Copilot models behind Claude Code's opus, sonnet and haiku aliases.\n- A **Copilot usage** page with copilot-api's token and cost dashboard. It also works from bb on a phone.\n- The Copilot credits each thread has used, under the prompt next to the context-window control, with a breakdown by model. bb has no plugin slot there yet: if a bb update changes that row, the credits move to the composer's action row.\n- Your premium-request quota in the Provider usage panel.\n- `bb claude-copilot` commands: status, login, logout, start and stop.\n\n## How it works\n\nThe plugin runs its own copy of copilot-api (https://github.com/caozhiyuan/copilot-api) on a random local port with a generated key, and points only this provider's Claude Code at it. copilot-api stops after 30 idle minutes by default and starts again on the next turn.\n\n## Requirements\n\n- A GitHub Copilot subscription. Model availability and premium-request use follow your Copilot plan.\n- Claude Code, with `claude` on PATH\n- bb 0.49 or later\n\n## Based on bb's Claude Code provider\n\nThe plugin contains a copy of bb's own Claude Code provider (MIT), so Copilot threads get the same features as normal Claude Code threads. It uses only public plugin API. A weekly job picks up changes to that provider from new bb releases."
     },
     {
       "id": "cozy-hq",
