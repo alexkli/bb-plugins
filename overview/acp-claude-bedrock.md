@@ -1,7 +1,7 @@
 ## What you get
 
 - **Claude Code (Bedrock ACP)** as a provider in the model picker. Threads run Claude Code through the ACP adapter and bill your AWS account instead of a Claude subscription. Forks and side chats work.
-- Setup in the plugin settings: Bedrock API key, AWS region or profile. bb stores the key as a secret and the agent reads it from there; the plugin keeps no copy, and removing the plugin removes the key.
+- Setup in the plugin settings, grouped like bb's own Claude Code provider screen: **AWS Bedrock** (Bedrock API key stored in a 0600 secret file the agent reads it from, AWS region, AWS profile) and **Usage** (monthly budget and price factor). Removing the plugin removes the key.
 - **Estimated spend** in the Provider usage panel and footer: this month and today, against a monthly budget you set.
 - A **price factor** for negotiated Bedrock pricing, for the cost bb shows in each thread and for the usage entry.
 - Plan mode that waits for you: when Claude finishes a plan, it opens in the side panel of the thread you're looking at and follows later revisions, and you get Claude's "Ready to code?" question, even in Full Access, where bb would otherwise approve it on its own.

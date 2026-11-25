@@ -2,15 +2,15 @@
   "id": "acp-claude-copilot",
   "displayName": "Claude Code ACP (Copilot)",
   "description": "Run Claude Code over ACP on your GitHub Copilot subscription, set up from the plugin settings with a GitHub sign-in. Copilot's GPT, Gemini and Grok models sit next to Claude in the model picker. Forks and side chats work. In Accept Edits, Bash runs in Claude Code's sandbox, as with bb's own Claude Code provider, and /compact works. In plan mode Claude waits for your go-ahead, even in Full Access. Each thread's Copilot credits show above the prompt, a usage page has the token dashboard, and your premium-request quota shows in the provider usage panel. Requires Node.js, Claude Code and a GitHub Copilot subscription.",
-  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.1/assets/logo.svg" },
+  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v1.1.0/assets/logo.svg" },
   "tags": ["claude-code", "github-copilot", "copilot", "acp", "plan-mode", "provider", "usage"],
   "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
   "category": "agents-and-providers",
-  "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-acp-claude-copilot.git", "range": "^0.2.1" } },
+  "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-acp-claude-copilot.git", "range": "^1.1.0" } },
   "screenshots": [
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.1/docs/overview.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/f8bc0ec/docs/settings.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v0.2.1/docs/usage.png"
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v1.1.0/docs/overview.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v1.1.0/docs/settings.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-acp-claude-copilot/v1.1.0/docs/usage.png"
   ],
   "overview": "./overview/acp-claude-copilot.md"
 }
