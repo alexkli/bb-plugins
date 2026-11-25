@@ -2,15 +2,15 @@
   "id": "claude-copilot",
   "displayName": "Claude Code (Copilot)",
   "description": "Run threads with the Claude Code harness on your GitHub Copilot subscription, including any model Copilot offers.",
-  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/icons/claude-copilot.png" },
+  "icon": { "url": "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.1/icons/claude-copilot.png" },
   "tags": ["claude-code", "github-copilot", "copilot", "gpt", "gemini", "provider", "usage"],
   "author": { "name": "Alexander Klimetschek", "github": "alexkli", "url": "https://github.com/alexkli" },
   "category": "agents-and-providers",
   "source": { "git": { "url": "https://github.com/alexkli/bb-plugin-claude-copilot.git", "range": "^1.0.0" } },
   "screenshots": [
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/docs/models.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/docs/settings.png",
-    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.0/docs/usage.png"
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.1/docs/models.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.1/docs/settings.png",
+    "https://raw.githubusercontent.com/alexkli/bb-plugin-claude-copilot/v1.0.1/docs/usage.png"
   ],
   "overview": "./overview/claude-copilot.md"
 }
