@@ -5,7 +5,7 @@
 - The Bedrock models Claude Code reports in the model picker, including inference profiles such as us.anthropic.claude-opus-5-5.
 - Estimated spend in the Provider usage panel and footer: this month and today, against a monthly budget you set, with a price factor for negotiated Bedrock pricing.
 - Each thread's **session cost** in the context-window popup under the prompt.
-- Setup in the plugin settings: Bedrock API key (stored as a bb secret), AWS region, AWS profile and an optional Claude Code executable.
+- Setup in the plugin settings: **AWS Bedrock** (Bedrock API key stored in a 0600 secret file, AWS region, AWS profile), **Usage** (monthly budget and price factor), **Claude Code** (bb's standard Claude Code options), and **Additional options** (optional **Prompt on sandbox escape** toggle).
 
 ## How it works
 
